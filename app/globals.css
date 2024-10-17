@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'CHEESEBURGA';
+    src: url('/fonts/CHEESEBURGA demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url('/fonts/KumbhSans-VariableFont_YOPQ,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ff-c {
+    font-family: 'CHEESEBURGA', sans-serif;
+}
+
+.ff-k {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.ff-m {
+    font-family: sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+
+.reflect {
+    width: 100%;
+    height: 100px; /* Same height as the image */
+    /* background: url("./assets/DALL·E 2024-07-14 16.40.05 - A 3D cartoon illustration of a furry Central Asian Shepherd dog jumping happily in the air. The dog should have a joyful expression with a wide smile, 2.png") no-repeat; */
+    background-size: cover;
+    transform: scaleY(-1); /* Flip the image vertically */
+    opacity: 0.4; /* Set reflection opacity */
+    filter: blur(2px); /* Slight blur for a more realistic effect */
+  }
+
+  .reflect {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
