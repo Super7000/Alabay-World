@@ -1,6 +1,6 @@
 export default function Features() {
     return (
-        <div className="container px-20 gap-4 flex justify-center justify-items-center text-center">
+        <div className="w-full px-20 gap-4 grid grid-cols-1 md:grid-cols-2 lg:flex justify-center justify-items-center text-center py-32">
             <div className="p-5 px-2" style={{ background: 'linear-gradient(180deg, #DBC70C 0%, rgba(255, 242, 128, 0.00) 100%)', borderTopLeftRadius: '3rem' }}>
                 <div className="text-4xl text-white font-bold">Community Building
                     and Initial Launch</div>

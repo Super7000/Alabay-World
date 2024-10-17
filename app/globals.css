@@ -26,6 +26,7 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
+    font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,14 +63,76 @@ body {
 
 .reflect {
     width: 100%;
-    height: 100px; /* Same height as the image */
+    height: 100px;
+    /* Same height as the image */
     /* background: url("./assets/DALL·E 2024-07-14 16.40.05 - A 3D cartoon illustration of a furry Central Asian Shepherd dog jumping happily in the air. The dog should have a joyful expression with a wide smile, 2.png") no-repeat; */
     background-size: cover;
-    transform: scaleY(-1); /* Flip the image vertically */
-    opacity: 0.4; /* Set reflection opacity */
-    filter: blur(2px); /* Slight blur for a more realistic effect */
-  }
+    transform: scaleY(-1);
+    /* Flip the image vertically */
+    opacity: 0.4;
+    /* Set reflection opacity */
+    filter: blur(2px);
+    /* Slight blur for a more realistic effect */
+}
 
-  .reflect {
+.reflect {
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1201px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+.heading {
+    background: linear-gradient(180deg, #FFF280 0%, #7EFF5E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'CHEESEBURGA';
+    font-size: 7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    -webkit-text-stroke: 0.5rem black;
+}
+
+.sub-heading {
+    color: #FFF;
+    text-align: center;
+    font-family: CHEESEBURGA;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.highlight {
+    background: linear-gradient(180deg, #FFF280 8.61%, #FFA800 36.76%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'CHEESEBURGA';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: normal;
+}

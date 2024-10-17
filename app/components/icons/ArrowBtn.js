@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function ArrowBtn() {
+export default function ArrowBtn({ w, h, className, style }) {
     return (
-        <svg viewBox="0 0 159 210" fill="none" xmlns="http://www.w3.org/2000/svg" className="my-auto ml-2 cursor-pointer active:p-3 transition-all" style={{ width: "139", height: "190" }}>
+        <svg viewBox="0 0 159 210" fill="none" xmlns="http://www.w3.org/2000/svg" className={"my-auto ml-2 cursor-pointer active:p-3 transition-all" + " " + className} style={{ width: w, height: h, ...style }}>
             <g id="Frame 3">
                 <g id="Rectangle 7" filter="url(#filter0_d_13002_594)">
                     <rect x="11" y="10" width="121" height="172" rx="33.8647" fill="#353535" />

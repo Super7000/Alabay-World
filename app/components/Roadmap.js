@@ -1,9 +1,9 @@
 export default function RoadMap() {
     return (
-        <div className="mt-16">
-            <h1 className="ff-c text-orange-400 text-center" style={{ fontSize: '185px' }}>ROAD MAP</h1>
+        <div className="mt-16 z-20 relative">
+            <h1 className="ff-c text-orange-400 text-center" style={{ fontSize: '11.56rem' }}>ROAD MAP</h1>
             <div className="flex items-center">
-                <p className="mt-9 ff-k font-extrabold text-left mx-auto ml-28" style={{ fontSize: '40px', lineHeight: 1 }}>
+                <p className="mt-9 ff-k font-extrabold text-left mx-auto ml-2 md:ml-28" style={{ fontSize: '2.5rem', lineHeight: 1 }}>
                     Our journey is just beginning. Explore our roadmap to see the exciting milestones and future plans we have in store.
                     <br />
                     <br />
