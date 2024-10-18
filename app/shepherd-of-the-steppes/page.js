@@ -13,7 +13,7 @@ function page() {
             themeColor={"#A4A8FF"}
         >
             <div>
-                <p className="text-white ff-m mt-10 w-1/2" style={{ fontSize: '1.375rem' }}>Take on the role of the legendary Alabay on a quest to uncover the ancient secrets of its ancestors. </p>
+                <p className="text-white ff-m mt-10 w-1/2 font-bold" style={{ fontSize: '1.375rem' }}>Take on the role of the legendary Alabay on a quest to uncover the ancient secrets of its ancestors. </p>
                 <PlayBtn themeColor='#A4A8FF' />
                 <GamePreview
                     themeColor='#A4A8FF'
@@ -24,7 +24,7 @@ function page() {
             <div className='mt-20' style={{ height: '75vh' }}>
                 <h2 className="text-3xl font-bold mt-auto" style={{ color: "#A4A8FF" }}>FEATURES</h2>
                 <div className='text-white mt-4'>
-                    <span className='font-bold' style={{ fontSize: '1.3rem' }}>
+                    <span className='font-semibold ff-m' style={{ fontSize: '1.3rem' }}>
                         Explore a variety of landscapes, including <span style={{ color: "#A4A8FF" }}>mountains</span>, <span style={{ color: "#A4A8FF" }}>forests</span>, <span style={{ color: "#A4A8FF" }}>deserts</span>, and ancient ruins.<br /><br />
 
                         Use the Alabay's <span style={{ color: "#A4A8FF" }}>abilities</span> to solve <span style={{ color: "#A4A8FF" }}>puzzles</span> that involve moving objects, activating mechanisms, or finding hidden clues.<br /><br />
