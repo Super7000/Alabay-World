@@ -1,0 +1,19 @@
+.heading {
+    color: #FFF;
+    font-family: "Baron Kuffner";
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 108.73%;
+    /* 104.381px */
+}
+
+.subHeading {
+    color: #90FFAE;
+    font-family: "Bebas Neue";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 108.73%;
+    letter-spacing: 11.04px;
+}

@@ -3,7 +3,7 @@ export default function Tokenomics() {
         <div className="md:px-20 pb-32">
             <h1 className="ff-c relative text-white text-left z-20" style={{ fontSize: '11.56rem' }}>TOKENOMICS</h1>
             <div className="flex flex-col relative lg:flex-row z-20">
-                <div className="flex flex-col gap-12 justify-center items-start flex-1 font-bold text-white">
+                <div className="flex flex-col gap-12 justify-center items-start flex-1 font-bold text-white px-6">
                     <div className="bg-black shadow-2xl shadow-black rounded-3xl py-5 px-14 w-full">
                         <div style={{ fontSize: '2.56rem' }}>LIQUIDITY</div>
                         <div style={{ fontSize: '4.56rem', lineHeight: 1 }} className="text-yellow-300 font-extrabold">LOCKED</div>

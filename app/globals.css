@@ -23,6 +23,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Baron Kuffner";
+    src: url('/fonts/Baron Kuffner.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -54,6 +68,14 @@ body {
     font-family: sans-serif;
 }
 
+.ff-bk {
+    font-family: "Baron Kuffner", sans-serif;
+}
+
+.ff-bn {
+    font-family: "Bebas Neue", sans-serif;
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
@@ -64,15 +86,10 @@ body {
 .reflect {
     width: 100%;
     height: 100px;
-    /* Same height as the image */
-    /* background: url("./assets/DALL·E 2024-07-14 16.40.05 - A 3D cartoon illustration of a furry Central Asian Shepherd dog jumping happily in the air. The dog should have a joyful expression with a wide smile, 2.png") no-repeat; */
     background-size: cover;
     transform: scaleY(-1);
-    /* Flip the image vertically */
     opacity: 0.4;
-    /* Set reflection opacity */
     filter: blur(2px);
-    /* Slight blur for a more realistic effect */
 }
 
 .reflect {
@@ -85,7 +102,7 @@ body {
 
 @media (max-width: 600px) {
     :root {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -119,8 +136,8 @@ body {
 .sub-heading {
     color: #FFF;
     text-align: center;
-    font-family: CHEESEBURGA;
-    font-size: 48px;
+    font-family: 'CHEESEBURGA';
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -132,7 +149,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'CHEESEBURGA';
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 400;
     line-height: normal;
 }

@@ -3,7 +3,7 @@ export default function Footer() {
         <div className="md:px-20 pb-32">
             <h1 className="ff-c text-orange-400 text-left" style={{ fontSize: '11.56rem' }}>SOCIAL MEDIA LINKS</h1>
             <div className="flex justify-center items-center flex-col md:flex-row">
-                <div className="rounded-3xl flex flex-col justify-start items-start flex-1 bg-blue-500 border-8 border-blue-800 text-2xl font-bold text-white p-10 gap-6 mr-auto">
+                <div className="rounded-3xl flex flex-col justify-start items-start flex-1 bg-blue-500 border-8 border-blue-800 text-2xl font-bold text-white p-10 gap-6 md:mr-auto">
                     <div className="flex justify-center items-center gap-4">
                         <img className="w-16 h-16 p-3 bg-black rounded-full" src="./assets/twitter logo 1.png" />
                         <p>Twitter Link</p>

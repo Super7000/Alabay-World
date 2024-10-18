@@ -1,15 +1,15 @@
 export default function RoadMap() {
     return (
         <div className="mt-16 z-20 relative">
-            <h1 className="ff-c text-orange-400 text-center" style={{ fontSize: '11.56rem' }}>ROAD MAP</h1>
-            <div className="flex items-center">
-                <p className="mt-9 ff-k font-extrabold text-left mx-auto ml-2 md:ml-28" style={{ fontSize: '2.5rem', lineHeight: 1 }}>
+            <h1 className="ff-c text-white text-center" style={{ fontSize: '11.56rem' }}>ROAD MAP</h1>
+            <div className="flex flex-col md:flex-row items-center">
+                <p className="mt-9 ff-k font-extrabold text-center md:text-start mx-auto ml-2 md:ml-28" style={{ fontSize: '2.5rem', lineHeight: 1 }}>
                     Our journey is just beginning. Explore our roadmap to see the exciting milestones and future plans we have in store.
                     <br />
                     <br />
                     <span className="text-orange-400">Join us as we grow and achieve new heights.</span>
                 </p>
-                <img src="./assets/DALL·E 2024-07-14 21.37.17 - A 3D cartoon illustration of a very happy furry Central Asian Shepherd dog in explorer attire, standing at a crossroads and holding a map with a yello 2.png" className="w-6/12" ></img>
+                <img src="./assets/DALL·E 2024-07-14 21.37.17 - A 3D cartoon illustration of a very happy furry Central Asian Shepherd dog in explorer attire, standing at a crossroads and holding a map with a yello 2.png" className="w-11/12 md:w-6/12" ></img>
             </div>
         </div>
     )
