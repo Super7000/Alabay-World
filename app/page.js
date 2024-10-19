@@ -26,7 +26,7 @@ export default function Home() {
 function MainPage() {
     return (
         <div className="px-0 lg:px-8 z-10 absolute w-full" style={{ top: '90%' }}>
-            <div className="w-full bg-white mb-8 overflow-x-hidden" style={{ borderRadius: "2rem" }}>
+            <div className="w-full bg-white mb-0 lg:mb-8 overflow-x-hidden" style={{ borderRadius: "2rem" }}>
                 <Header />
                 <Gallery />
                 <ProjectVision />

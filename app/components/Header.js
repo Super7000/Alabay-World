@@ -19,7 +19,7 @@ export default function Header() {
             <div className="text-center lg:text-right container mr-20 w-full px-3 lg:w-5/12 relative z-10 ms-auto h-full mt-24">
                 <h1 style={{ color: 'rgba(247, 105, 2, 0.82)', fontSize: '5.5rem', lineHeight: 1 }}>
                     <span className="font-extrabold ff-m">History Of</span>
-                    <div className="ff-c text-white tracking-wide mt-10" style={{ fontSize: '11.25rem' }}>ALABAY</div>
+                    <div className="ff-c text-white tracking-wide mt-10 main-heading">ALABAY</div>
                 </h1>
                 <p className="mt-10 ff-k font-extrabold" style={{ fontSize: '2.5rem', lineHeight: 1 }}>
                     The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.
