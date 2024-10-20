@@ -18,11 +18,3 @@ export default function Footer() {
         </div>
     )
 }
-
-function Box() {
-    return (
-        <div>
-
-        </div>
-    )
-}

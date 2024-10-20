@@ -27,9 +27,9 @@ function page() {
                     <span className='font-bold ff-m' style={{ fontSize: '1.1rem' }}>
                         Explore a variety of landscapes, including <span style={{ color: "#90FFAE" }}>mountains</span>, <span style={{ color: "#90FFAE" }}>forests</span>, <span style={{ color: "#90FFAE" }}>deserts</span>, and ancient ruins.<br /><br />
 
-                        Use the Alabay's <span style={{ color: "#90FFAE" }}>abilities</span> to solve <span style={{ color: "#90FFAE" }}>puzzles</span> that involve moving objects, activating mechanisms, or finding hidden clues.<br /><br />
+                        Use the Alabay’s <span style={{ color: "#90FFAE" }}>abilities</span> to solve <span style={{ color: "#90FFAE" }}>puzzles</span> that involve moving objects, activating mechanisms, or finding hidden clues.<br /><br />
 
-                        Discover relics that tell the story of the Alabay’s ancestors, each piece contributing to a larger narrative about the breed's role in ancient history.<br /><br />
+                        Discover relics that tell the story of the Alabay’s ancestors, each piece contributing to a larger narrative about the breed’s role in ancient history.<br /><br />
 
                         Unlock new skills and abilities for the Alabay, enhancing its capacity to explore and solve puzzles.<br /><br />
 

@@ -51,7 +51,7 @@ export default function Gallery() {
                 <div className={`text-black hover:text-yellow-400 cursor-pointer font-extrabold ${filter === "PHOTO" ? "text-yellow-400" : ""}`} onClick={() => setFilter("PHOTO")}>PHOTOS</div>
                 <div className={`text-black hover:text-yellow-400 cursor-pointer font-extrabold ${filter === "VIDEO" ? "text-yellow-400" : ""}`} onClick={() => setFilter("VIDEO")}>VIDEOS</div>
             </div>
-            <div className="container grid grid-flow-col justify-center ps-4 pr-4 mt-16 w-full">
+            <div className="grid grid-flow-col justify-center ps-4 pr-4 mt-16 w-full">
                 <ArrowBtn w={'5.56rem'} h={"8.75rem"} className={"ml-0 mr-6 rotate-180"} onClick={() => handleScroll('left')} />
                 <div className="grid grid-flow-col gap-12 overflow-x-auto overflow-y-clip" ref={scrollContainerRef}>
                     {
