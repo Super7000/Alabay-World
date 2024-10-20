@@ -13,7 +13,7 @@ function GamePageLayout({ bg, heading, subHeading, themeColor, children }) {
             <div className='p-14 flex flex-col h-screen'>
                 <h1 className={styles.heading}>{heading}</h1>
                 <span className={styles.subHeading} style={{ color: themeColor }}>{subHeading}</span>
-                <div className='flex flex-col flex-1 overflow-y-auto' ref={scrollElem}>
+                <div className='flex flex-col flex-1 overflow-y-auto scroll-container' ref={scrollElem}>
                     {children}
                 </div>
             </div>

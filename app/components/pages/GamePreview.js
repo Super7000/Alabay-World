@@ -1,6 +1,6 @@
 export default function GamePreview({ themeColor = '#90FFAE', imgs = [], folder }) {
     return (
-        <div className='mt-16'>
+        <div className='mt-8'>
             <span className='text-3xl font-bold mt-auto'>
                 <span style={{ color: themeColor }}>GAME</span>
                 <span className='text-white'> PREVIEW</span>

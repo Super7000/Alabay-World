@@ -175,3 +175,18 @@ body {
     font-weight: 400;
     line-height: normal;
 }
+
+.scroll-container {
+    scroll-snap-type: y mandatory;
+    /* Vertical snapping */
+}
+
+.scroll-snap {
+    scroll-snap-align: start;
+    /* Snap the item to the start */
+}
+
+.scroll-item {
+    scroll-snap-stop: always;
+    /* Enforces snapping on every scroll */
+}
