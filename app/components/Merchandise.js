@@ -1,83 +1,49 @@
 'use client'
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Arrow from "./icons/Arrow";
 
 export default function Merchandise() {
-    const productElem = useRef();
+    const container = useRef();
     const bgElem = useRef();
-    const bgSrcs = ["pink tee bck.png", "yellow tee bck.png", "black hoodie bck.png", "blue cap bck.png"]
-    const productSrcs = ["pink tshirt.png", "yellow tshirt.png", "black hoodie.png", "cap mockup.png"]
-    const [bg, setBg] = useState(bgSrcs[0]);
-    const [product, setProduct] = useState(productSrcs[0])
-    const [animateState, setAnimateState] = useState('enter'); // 'enter', 'middle', 'exit'
-    const [bgAnimateState, setBgAnimateState] = useState('fade-in'); // 'fade-in', 'fade-out'
-    const [index, setIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            nextProduct();
-        }, 3000)
-        return () => {
-            clearInterval(interval)
-        }
-    }, [index])
+    const bgSrcs = ["pink tee bck.png", "yellow tee bck.png", "black hoodie bck.png", "blue cap bck.png"];
+    const productSrcs = ["pink tshirt.png", "yellow tshirt.png", "black hoodie.png", "cap mockup.png"];
 
-    const nextProduct = () => {
-        setAnimateState('enter');
-        setBgAnimateState('fade-out');
-        setTimeout(() => {
-            setAnimateState('middle');
-            setBgAnimateState('fade-in');
-            setTimeout(() => {
-                setAnimateState('exit');
-                setTimeout(() => {
-                    const newIndex = (index + 1) % bgSrcs.length;
-                    setBg(bgSrcs[newIndex]);
-                    setProduct(productSrcs[newIndex]);
-                    setIndex(newIndex);
-                }, 500); // Duration of the "exit" animation
-            }, 2000); // Duration of the "middle" state
-        }, 500); // Duration of the "enter" animation
-    }
+    const scrollContainer = (direction) => {
+        const containerEl = container.current;
+        const scrollAmount = direction === 'left' ? -containerEl.clientWidth - 32 : containerEl.clientWidth + 32;
+        containerEl.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 
-    const prevProduct = () => {
-        setAnimateState('enter');
-        setBgAnimateState('fade-out');
-        setTimeout(() => {
-            setAnimateState('middle');
-            setBgAnimateState('fade-in');
-            setTimeout(() => {
-                setAnimateState('exit');
-                setTimeout(() => {
-                    const newIndex = (index - 1 + bgSrcs.length) % bgSrcs.length;
-                    setBg(bgSrcs[newIndex]);
-                    setProduct(productSrcs[newIndex]);
-                    setIndex(newIndex);
-                }, 500); // Duration of the "exit" animation
-            }, 2000); // Duration of the "middle" state
-        }, 500); // Duration of the "enter" animation
-    }
+        const nextIndex = Math.floor((containerEl.scrollLeft + scrollAmount) / containerEl.clientWidth) % bgSrcs.length;
+        bgElem.current.src = `./assets/Alabay Merch/${bgSrcs[nextIndex]}`;
+    };
 
     return (
-        <div className="md:px-20 pb-32">
+        <div className="md:px-20 pb-32 relative">
             <h1 className="relative ff-c text-orange-400 text-center z-20 main-heading">MERCHANDISE</h1>
             <div className="flex justify-center items-center gap-4 mx-2">
-                <div className="rotate-180 p-5 bg-white shadow-sm shadow-black rounded-full z-20 cursor-pointer" onClick={prevProduct}>
+                <div className="rotate-180 p-5 bg-white shadow-sm shadow-black rounded-full z-20 cursor-pointer" onClick={() => scrollContainer('left')}>
                     <Arrow width={2} height={2} fill="black" />
                 </div>
                 <div className="relative z-20 flex-1 overflow-hidden">
-                    <img
-                        src={"./assets/Alabay Merch/" + bg}
-                        className={`rounded-3xl transition-opacity bg-slate-600 ${bgAnimateState === 'fade-in' ? 'opacity-100' : 'opacity-0'}`}
-                        ref={bgElem}
-                    />
-                    <img
-                        src={"./assets/Alabay Merch/" + product}
-                        className={`absolute transition-all -translate-y-full duration-500 ${animateState === 'enter' ? 'translate-x-full opacity-0' : animateState === 'middle' ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
-                        ref={productElem}
-                    />
+                    <div className="flex flex-row overflow-x-auto sliding-container whitespace-nowrap" ref={container}>
+                        {productSrcs.map((src, index) => (
+                            <img
+                                key={index}
+                                src={"./assets/Alabay Merch/" + src}
+                                className="w-full mr-8 sliding-image inline-block rounded-3xl z-20"
+                                style={{ objectFit: 'cover' }}
+                            />
+                        ))}
+                        <img
+                            src={`./assets/Alabay Merch/${bgSrcs[0]}`}
+                            alt="Background"
+                            className="absolute inset-0 w-full h-full object-cover z-0 rounded-3xl"
+                            ref={bgElem}
+                        />
+                    </div>
                 </div>
-                <div className="p-5 bg-white shadow-sm shadow-black rounded-full z-20 cursor-pointer" onClick={nextProduct}>
+                <div className="p-5 bg-white shadow-sm shadow-black rounded-full z-20 cursor-pointer" onClick={() => scrollContainer('right')}>
                     <Arrow width={2} height={2} fill="black" />
                 </div>
             </div>
